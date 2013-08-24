@@ -1,0 +1,20 @@
+h1= title
+p Welcome to #{title}
+p holo
+ul 
+	for user in users
+		li #{user.FirstName} #{user.LastName}
+	else
+		li sorry, no users!
+
+div
+	form(action="/user" method="post")
+		div
+			div
+				span.label First Name :
+					input(type="text", name="FirstName", id="newUserFirstName")
+			div
+				span.label Name :
+					input(type="text", name="LastName", id="newUserLastName")
+			div#newEmployeeSubmit
+				input(type="submit", value="Save")
