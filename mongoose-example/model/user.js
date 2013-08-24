@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 module.exports = {
 	index: function(callback){
-		console.log("model/team.js: teamlist");
+		console.log("model/user.js: index");
 		var User = mongoose.model('User');
 
 		User.find({}, function (err, users){
@@ -10,10 +10,21 @@ module.exports = {
 				console.log("ERR: "+err);
 			}
 			else {
-				console.log(users);
+				//console.log(users);
 				callback("", users);
 			}
 		})
+	}, 
+	create: function(data, callback){
+      var User = mongoose.model('User');
+      var user = new User(data);
+      user.save(function(err){
+        console.log("saving");
+        if(!err){
+          console.log('User saved.');
+        }
+        callback();
+      });
 	}
 
 } 
