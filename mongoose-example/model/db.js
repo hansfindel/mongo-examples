@@ -9,8 +9,3 @@ var User = mongoose.model('User', userSchema);
 
 mongoose.connect('mongodb://127.0.0.1/Express-MongoDB-Example');
 console.log("model/db.js: database connected");
-
-
-//try to save something in the database
-
-//trying to create something in the database
