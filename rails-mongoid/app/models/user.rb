@@ -3,4 +3,5 @@ class User
   field :FirstName, type: String
   field :LastName, type: String
   field :email, type: String
+  
 end
