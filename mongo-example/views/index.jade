@@ -7,14 +7,15 @@ ul
 	else
 		li sorry, no users!
 
+hr
 div
 	form(action="/user" method="post")
-		div
-			div
-				span.label First Name :
-					input(type="text", name="FirstName", id="newUserFirstName")
-			div
-				span.label Name :
-					input(type="text", name="LastName", id="newUserLastName")
-			div#newEmployeeSubmit
+		div.newUser
+			div.field
+				span.label First Name
+				input(type="text", name="FirstName", id="newUserFirstName")
+			div.field
+				span.label Last Name
+				input(type="text", name="LastName", id="newUserLastName")
+			div#newUserSubmit
 				input(type="submit", value="Save")

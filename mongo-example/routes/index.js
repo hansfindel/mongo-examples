@@ -11,7 +11,7 @@ module.exports = {
 	index: function(req, res){
 		var User = db.user;
 		User.findAll({}, function(err, users){
-  			console.log(users)
+  			//console.log(users)
   			res.render('index', { title: 'Express', users: users })	
   		});
 	}, 
