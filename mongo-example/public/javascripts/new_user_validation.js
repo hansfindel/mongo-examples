@@ -2,7 +2,6 @@ function getSubmitButton(){
 	return document.getElementById("newUserSubmit").childNodes[0];
 }
 function check(e){
-	e.preventDefault();
 	var missing = []	
 	divs = document.getElementsByClassName("field")	
 	for(var i = 0; i < divs.length; i++){
